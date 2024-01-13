@@ -6,7 +6,7 @@ import Image from './Image';
 import FileUpload from './Upload';
 
 
-const Card = ({ counter, refetch }) => {
+const Card = ({ counter, refetch, id }) => {
     return (
         <div className='bg-white rounded-md p-2 space-y-4 min-w-80'>
             {/* row 1  */}
@@ -19,7 +19,6 @@ const Card = ({ counter, refetch }) => {
                 <div className='flex gap-2 items-center w-full'>
                     <Image url={"https://i.ibb.co/grG7MWH/user2.jpg"} />
                     <h1 className='font-medium text-slate-600'>Sadman Istiak</h1>
-
                 </div>
             </div>
             {/* row 2 */}
@@ -36,7 +35,7 @@ const Card = ({ counter, refetch }) => {
                 </h1>
                 <div className='flex gap-1 justify-center items-center '>
 
-                    <FileUpload refetch={refetch} />
+                    <FileUpload refetch={refetch} id={id} />
 
                     <h1 >  {counter ? counter : 0}</h1>
                 </div>

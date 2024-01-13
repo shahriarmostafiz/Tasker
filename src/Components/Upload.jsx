@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { GrAttachment } from "react-icons/gr";
+import toast from 'react-hot-toast';
 
 
-const FileUpload = ({ refetch }) => {
+const FileUpload = ({ refetch, id }) => {
     const [files, setFiles] = useState([]);
     const [showModal, setShowModal] = useState(false);
 
@@ -12,16 +13,17 @@ const FileUpload = ({ refetch }) => {
     };
 
     const handleUpload = async () => {
-        // Perform file upload logic using axios.post
         const formData = new FormData();
         files.forEach((file) => {
             formData.append('files', file);
         });
 
         try {
-            const response = await axios.post('http://localhost:5000/upload', formData);
+            const response = await axios.post(`https://tasker-zeta-jet.vercel.app/upload/${id}`, formData);
             console.log(response.data);
+
             refetch()
+
 
         } catch (error) {
             console.error('Error uploading files:', error);
@@ -31,6 +33,7 @@ const FileUpload = ({ refetch }) => {
         setFiles([]);
         // Close the modal
         setShowModal(false);
+        toast.success("file uploaded successfully")
     };
 
     return (

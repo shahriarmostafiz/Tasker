@@ -15,13 +15,13 @@ const Tasks = ({ filteredData, refetch, type }) => {
                         {type}
                     </h1>
                 </div>
-                <div className='bg-gray-500 p-1 '>
+                <div className='bg-gray-500 px-2 py-1 rounded '>
                     0
                 </div>
 
             </div>
             {
-                filteredData.map(task => <Card key={task._id} counter={task?.counter} refetch={refetch} />)
+                filteredData.map(task => <Card key={task._id} id={task._id} counter={task?.counter} refetch={refetch} />)
             }
 
         </div>

@@ -40,12 +40,11 @@ import Tasks from './Tasks';
 
 
 const App = () => {
-
   const { data, isPending, refetch } = useQuery(
     {
       queryKey: ["Data"],
       queryFn: async () => {
-        const data = await axios.get("http://localhost:5000/tasks")
+        const data = await axios.get("https://tasker-zeta-jet.vercel.app/tasks")
         return data.data
       }
     }
