@@ -37,6 +37,7 @@ import Card from './Components/Card';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Tasks from './Tasks';
+// import "./index.css"
 
 
 const App = () => {
@@ -64,8 +65,8 @@ const App = () => {
   return (
     <div className="max-w-screen-2xl p-4 space-y-4 overscroll-none">
       <div><hr /></div>
-      <div className='w-full overflow-x-scroll '>
-        <div className="flex w-full">
+      <div className='w-full overflow-x-scroll my-scroll'>
+        <div className="flex w-full gap-4">
 
           {types.map(type => {
             // Filter data based on the current type
