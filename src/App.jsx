@@ -65,7 +65,7 @@ const App = () => {
   return (
     <div className="max-w-screen-2xl p-4 space-y-4 overscroll-none">
       <div><hr /></div>
-      <div className='w-full overflow-x-scroll my-scroll'>
+      <div className='w-full overflow-x-scroll my-scroll pb-4'>
         <div className="flex w-full gap-4">
 
           {types.map(type => {
