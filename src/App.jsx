@@ -1,42 +1,7 @@
-// import axios from 'axios'
-// import './App.css'
-// import react, { useState } from "react"
-
-// function App() {
-//   const [upload, setUpload] = useState(null)
-//   const handleChange = e => {
-//     // console.log(e.target.files[0])
-//     setUpload(e.target.files[0])
-//   }
-//   const handleUpload = () => {
-//     console.log(upload);
-//     const formData = new FormData();
-//     formData.append('file', upload);
-//     // console.log(formData.get('file'));
-//     axios.post("http://localhost:5000/upload", formData)
-//       .then(res => { console.log(res.data) })
-//       .catch(err => console.log(err))
-//   }
-
-//   return (
-//     <>
-
-
-//       <input type="file" name="" id="" onChange={handleChange} />
-//       <button onClick={handleUpload} className='p-1 border bg-gray-600' >Upload</button>
-
-
-
-//     </>
-//   )
-// }
-
-// export default App
-import { Fragment, useEffect } from 'react';
 import Card from './Components/Card';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import Tasks from './Tasks';
+import Tasks from './Components/Tasks';
 // import "./index.css"
 
 

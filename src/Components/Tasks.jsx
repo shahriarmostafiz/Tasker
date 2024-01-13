@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import Card from './Components/Card';
+import Card from './Card';
 
 const Tasks = ({ filteredData, refetch, type }) => {
     return (
@@ -8,10 +8,10 @@ const Tasks = ({ filteredData, refetch, type }) => {
         <div className='h-full w-full p-2 bg-gray-300 rounded space-y-4  max-h-screen min-w-80 overflow-y-scroll my-scroll '>
             <div className=' flex justify-between'>
                 <div className='flex items-center gap-2'>
-                    <div className={`p-4 ${type === "To Do" ? "bg-sky-600" : type === "Incomplete" ? "bg-red-500" : type === "Doing" ? "bg-yellow-500" : "bg-transparent"} rounded-l-full`}>
+                    <div className={`p-4 ${type === "To Do" ? "bg-sky-600" : type === "Incomplete" ? "bg-red-500" : type === "Doing" ? "bg-yellow-500" : "bg-transparent px-1"} rounded-l-full`}>
 
                     </div>
-                    <h1 className='text-slate-600'>
+                    <h1 className='text-slate-600 font-semibold text-lg'>
                         {type}
                     </h1>
                 </div>
