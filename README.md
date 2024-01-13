@@ -8,3 +8,7 @@
 - Axios
 - Tanstack Query (formerly known as React Query)
 - React Icons
+
+## API Server Code
+
+- [Server Repository Link](https://github.com/shahriarmostafiz/tasker-server)
